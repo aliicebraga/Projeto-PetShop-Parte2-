@@ -52,7 +52,7 @@
         <!--dentro da tag form foram utilizados vários inputs com atributos types diferentes para tipos de entradas diferentes, com o name e id definidos é possível entender a finalidade de cada um-->
         <form action="">
           <!--a tag <fieldset> tem como função agrupar um conjunto de elementos-->
-          <legend>Dados pessoais</legend>
+          <legend class="subtitulo">Dados pessoais</legend>
           <p>
             <label for="nome"
               >Nome:
@@ -86,7 +86,7 @@
           <p>
             <label for="compra-radio"
               >Já realizou alguma compra em nosso site?</label
-            ><br />
+            >
             <input type="radio" name="compra-radio" id="compra-sim" />
             <label for="compra-sim"
               >Sim. (Caso sim, indique qual foi seu pedido mais recente)</label
@@ -106,7 +106,7 @@
           </p>
           <p>
             <label for="data-pedido"
-              >Data da compra: <br /><input
+              >Data da compra: <input
                 type="date"
                 name="data-pedido"
                 id="data-pedido"
@@ -130,7 +130,7 @@
               <textarea name="mensagem" id="mensagem"></textarea>
             </label>
           </p>
-          <p>Sobre seu pet:</p>
+          <p class="subtitulo">Sobre seu pet:</p>
           <p>
             <label for="especie"
               >Espécie(s) do(s) seu(s) <i>bichAninho:</i></label
@@ -180,7 +180,7 @@
           clientes. Assim que tivermos um retorno, entraremos em contato!
         </p>
         <form action="" id="parceiros-form">
-          <legend>Cadastro pequenas empresas:</legend>
+          <legend class="subtitulo">Cadastro pequenas empresas:</legend>
           <p>
             <label for="nome"
               >Nome:
@@ -212,7 +212,7 @@
             /></label>
           </p>
           <p>
-            <label for="idade">Qual sua idade?</i></label><br>
+            <label for="idade">Qual sua idade?</i></label>
             <select name="idade" id="idade">
               <option>Selecione sua idade</option>
               <option value="01">01</option>
@@ -319,7 +319,7 @@
           </p>
           <p>
             <label for="cidade"
-              >Qual cidade reside: <br>
+              >Qual cidade reside:
               <input
                 type=""
                 id="cidade"
@@ -329,7 +329,7 @@
           </p>
           <p>
             <label for="estado"
-              >Qual estado reside: <br>
+              >Qual estado reside: 
               <input type="text" id="estado" name="estado" placeholder="UF"
             /></label>
           </p>
@@ -337,7 +337,7 @@
             <label for="especie"
               >Para qual <i>bichAninho</i> teria mais interesse de produzir
               peças?</label
-            ><br />
+            >
             <select name="especie" id="especie">
               <option>Selecione</option>
               <option value="dog">Cachorro</option>
@@ -348,9 +348,9 @@
             </select>
           </p>
           <p>
-            <label for="cadastro-mei-radio">Já possui cadastro MEI?</label><br>
+            <label for="cadastro-mei-radio">Já possui cadastro MEI?</label>
             <input type="radio" name="cadastro-mei-radio" id="mei-sim" />
-            <label for="mei-sim">Sim.</label><br>
+            <label for="mei-sim">Sim.</label>
             <input type="radio" name="cadastro-mei-radio" id="mei-nao" />
             <label for="mei-nao">Não.</label>
           </p>

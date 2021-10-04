@@ -145,10 +145,8 @@ h2 {
   text-align: left;
   padding: 0 1.5rem 1rem 1rem;
   font-size: 1rem;
-  line-height: 2rem;
-}
-#parceiros-form legend {
-  font-weight: bold;
+  line-height: 3.25rem;
+  text-align: justify;
 }
 
 #clientes-form {
@@ -156,9 +154,12 @@ h2 {
   padding: 0 1.5rem 1rem 1rem;
   font-size: 1rem;
   line-height: 2rem;
+  text-align: justify;
 }
-#clientes-form legend {
+
+.subtitulo {
   font-weight: bold;
+  text-decoration: underline;
 }
 
 /* ESTILIZAÇÃO DOS BOTÕES */
