@@ -1,0 +1,252 @@
+/* RESET DA PÁGINA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  flex-wrap: wrap;
+  font-size: 100%;
+  /* word-wrap: break-word; */
+}
+
+/* DECLARAÇÃO DE VARIÁVEIS - FACILITA NA HORA DE CHAMAR AS CORES */
+:root {
+  /* paleta de cores complementar*/
+  --color01: #308eb0;
+  --color02: #78dbff;
+  --color03: #5dd2fc;
+  --color04: #b38d63;
+  --color05: #fd8300;
+  --back-color: aliceblue;
+}
+
+/* DEFININDO O BODY COMO DISPLAY GRID, NA PÁGINA PRODUCTS TEM TRÊS LINHAS E DUAS COLUNAS */
+body {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'aside main'
+    'footer footer';
+  grid-template-columns: 20vw 80vw;
+  grid-template-rows: 15vh auto auto;
+}
+
+/* CADA CLASSE COM SUA RESPECTATIVA GRID-AREA, DEFININDO TAMBÉM COR DE FUNDO E BORDA */
+.header {
+  grid-area: header;
+  background-color: var(--color03);
+  border-bottom: 1px solid var(--color05);
+}
+.aside {
+  grid-area: aside;
+}
+
+.main {
+  grid-area: main;
+  background-color: var(--back-color);
+}
+.footer {
+  grid-area: footer;
+  background-color: var(--color03);
+  color: var(--color04);
+  border-bottom: 1px solid var(--color05);
+  padding: 1rem;
+}
+
+/* TAG NAV CLASSIFICADA COMO CONTAINER PARA POSSIBILITAR A CHAMADA DO DISPLAY FLEX NO MENU*/
+.nav.container {
+  display: flex;
+  width: 100vw;
+  height: 15vh;
+  justify-content: center;
+}
+
+/* ESTILIZAÇÕES DOS ITENS DO MENU QUE TEM ESCRITA */
+.nav-item.menu {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--color05);
+  background-color: var(--back-color);
+  margin: auto;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+/* SELETOR PARA MUDAR A ESTILIZAÇÃO QUANDO O MOUSE PASSA POR CIMA */
+.nav-item.menu:hover {
+  text-decoration: underline;
+  /* font-size: 1.3rem; */
+  padding: 1.5rem;
+  color: var(--back-color);
+  background-color: var(--color05);
+}
+
+/* ESTILIZAÇÃO DO ITEM DO MENU QUE TEM LOGO */
+.nav-item #logotipo {
+  height: 14vh;
+  padding-top: 1vh;
+}
+
+/* ALINHAMENTO DAS TAGS H1,H2,H3 NO CENTRO DA PÁGINA E DEFINIÇÃO DA FONTE NO TAMANHO DEFAULT */
+h1 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+h2 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.17rem;
+}
+
+/* ESTILIZAÇÃO DO CONTEÚDO DA TAG ASIDE */
+#conteudo-aside p {
+  padding: 2%;
+  text-indent: 2rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+#conteudo-aside ol {
+  /* padding-left: 1rem; */
+  margin-left: 2rem;
+}
+
+#video-aside {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* SELETOR DEFININDO O QUINTO ELEMENTO DA TAG LI COM PESO BOLD */
+li:nth-of-type(5) {
+  font-weight: bold;
+}
+
+/* DEFINIÇÃO DA CLASSE PRODUCT-CONTAINER COM DISPLAY FLEX */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+/* ESTILIZAÇÃO DAS TAGS CLASSIFICADAS COMO PRODUCT-ITEM DENTRO DA CLASSE PRODUCT-CONTAINER */
+.product-item {
+  /* border: 0.1rem solid var(--color05); */
+  width: 23%;
+  margin: auto;
+  box-sizing: border-box;
+  border-radius: 5%;
+}
+
+/* ESTILIZAÇÃO DO BACKGROUND USANDO O SELETOR */
+.product-item:nth-of-type(2n) {
+  background-color: var(--color01);
+}
+
+.product-item:nth-last-of-type(2n) {
+  background-color: var(--color03);
+}
+
+/* ESTILIZAÇÃO DOS BOTÕES */
+.product-item button {
+  padding: 0.4rem;
+  border-radius: 2rem;
+  border-color: var(--color05);
+  font-variant: small-caps;
+}
+
+/* ESTILIZAÇÃO DO BOTÃO COM O SELETOR HOVER */
+button:hover {
+  text-decoration: underline;
+
+  color: var(--back-color);
+  background-color: var(--color05);
+}
+
+/* DEFINIÇÃO DO TAMANHO DA IMAGEM DOS ANIMAIS */
+#dog-modelando {
+  width: 100%;
+  padding: 1rem 0 1rem 0;
+}
+
+#coelho-modelando {
+  width: 100%;
+  padding: 1.2rem 0 1.2rem 0;
+}
+
+#cat-modelando {
+  width: 100%;
+  padding: 1.6rem 0 1.6rem 0;
+}
+
+#roedor-modelando {
+  width: 100%;
+  padding: 1.1rem 0 1.1rem 0;
+}
+
+.table-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+
+.tr-item {
+  border: 1px solid var(--color05);
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.tr-left {
+  text-align: left;
+  font-size: 1em;
+  padding-top: 2rem;
+}
+
+/* ESTILIZAÇÃO DO RODAPÉ COMO DISPLAY FLEX, O QUE POSSIBILITA A DIVISÃO DO CONTEÚDO EM TRES COLUNAS DIFERENTES. CADA UMA COM SEU TAMANHO DEFINIDO PELO CONTEÚDO */
+.footer.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+/* DFINIÇÃO DO TAMANHO DA TAG ADDRESS E ESPAÇAMENTO ENTRE LINHAS */
+.footer address {
+  width: 60vw;
+  line-height: 2rem;
+}
+
+/* DEFINIÇÃO DE LINHA SUBLINHADA PARA TODA TAG P NO FOOTER */
+.footer .paragrafo {
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+/* CHAMADA DA IMAGEM QUE SIMBOLIZA O ÍCONE E LINK PARA O INSTAGRAM */
+.footer #instagram {
+  align-items: center;
+  width: 4vw;
+  background-image: url('../img/instagram.png');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* CHAMADA DA IMAGEM QUE SIMBOLIZA O ÍCONE E LINK PARA O FACEBOOK */
+.footer #facebook {
+  align-items: center;
+  width: 4vw;
+  background-image: url('../img/facebook.png');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}

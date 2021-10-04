@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <!--Metadados da página, comum as outras páginas-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alice Braga" />
+    <meta name="description" content="Loja de Roupinhas para Animais" />
+    <meta name="keywords" content="Roupas, Animais, Conforto" />
+    <title>Moda Animal</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  </head>
+  <body>
+    <!--tag <header> representa o cabeçalho da página-->
+    <!--tag <nav> indica ser a seção composta por um menu ou uma seção que leva a outras páginas-->
+    <header class="header">
+      <nav class="nav container" id="menu">
+        <a href="index.html" class="nav-item">
+          <img
+            src="logo/logo500x320.png"
+            alt="logo da marca bichAninho com o subtítulo aconchego para seu bichinho"
+            title="bichAninho é bicho mais aconchego"
+            id="logotipo"
+          />
+        </a>
+        <a href="index.html" class="nav-item menu">Página Inicial</a>
+        <a href="products.html" class="nav-item menu"
+          >Conheça Nossos Produtos</a
+        >
+        <a href="contacts.html" class="nav-item menu">Fale Conosco</a>
+        <a href="#" class="nav-item menu">"Minha conta"</a>
+      </nav>
+    </header>
+
+    <!--tag <main> consiste em um elemento semântico que representa o conteúdo principal da página, 
+        ele é exclusivo e não se repete em outras páginas-->
+    <main class="main grid-container">
+      <!--tag <h1> indica o título principal da página e recomenda-se que se tenha apenas um por página-->
+      <h1 class="titulo">
+        Quer roupas de qualidade para seu bichinho? Nós podemos te oferecer!
+      </h1>
+      <div class="imagem-index" id="imagem-index">
+        <!--tag <figure> envolve a tag <img> o que habilita que seja utilizada uma legenda para a imagem com o uso da tag <figcaption>-->
+        <figure>
+          <img
+            src="img/dog-resizeed.jpg"
+            alt="cachorro feliz vestindo roupinha"
+            title="mais um cliente feliz"
+          />
+          <figcaption><i>bichAninho</i> no estilo</figcaption>
+        </figure>
+      </div>
+      <!--corpo de textos composto por tags <p> formando parágrafos para leitura e utilizando-se da tag <br> para quebra de linha-->
+      <div class="conteudo-index" id="conteudo-index">
+        <p class="paragrafo">
+          Surgimos a partir da insatisfação com roupas de animais que duram
+          poucas lavagens. Chega de roupas rasgadas após o primeiro uso, aqui
+          seu investimento é duradouro!
+        </p>
+
+        <!--utilização da tag semântica <strong> para demonstrar o que é de forte importância no texto-->
+        <p class="paragrafo">
+          Sabemos que um bom tecido faz diferença na hora de aquecer o seu pet.
+          A <strong>qualidade</strong> das roupinhas pode interferir na saúde da
+          pelagem animal.
+        </p>
+        <p class="paragrafo">
+          Pensando nisso, desenvolvemos
+          <a href="products.html">produtos</a> direcionados ao
+          <strong>bem-estar</strong> e <strong>conforto</strong> de qualquer
+          <i>bichAninho.</i>
+        </p>
+
+        <!--utilização do elemento lista não ordenada (composto pela tag <ul> e <li>), nesse caso usado para dar uma quebra no padrão visual e chamar a atenção do leitor. o atributo type com o valor square mostra as listas iniciando-se com um pequeno quadrado-->
+        <ul class="paragrafo" type="square">
+          <li>
+            Oferecemos roupinhas para todas as espécies e gostos, nossos
+            principais compradores são: cachorríneos, coelhinos, gatíneos e
+            roedores.
+          </li>
+          <li>
+            Nossas peças são produzidas por pequenos empreendedores. Essa
+            parceria proporciona a exposição de seus trabalhos e uma renda
+            extra, além de garantir as melhores roupinhas.
+          </li>
+          <li>
+            Não encontrou uma roupinha para seu <i>bichAninho? </i
+            ><a href="contacts.html#clientes-form">Deixe seu recado!</a>
+          </li>
+          <li>
+            Ainda não tem um <i>bichAninho</i> para chamar de seu?
+            <cite
+              >Encontre
+              <a
+                href="https://protecaoanimal.curitiba.pr.gov.br/adocao"
+                target="blank"
+                >aqui</a
+              >
+              mais informações e adote!</cite
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!--tag <h2> demonstra um subtítulo da página, nesse caso para chamar a atenção e atrair novos parceiros-->
+      <h2 class="titulo-h2">Você produz roupas para <i>bichAninhos?</i></h2>
+      <section class="chamada-parceiros">
+        <p class="paragrafo">
+          Temos uma oportunidade para você! Aqui na <i>bichAninho</i> você faz o
+          seu cadastro online. E, a partir de uma análise rápida e treinamento
+          para manter a qualidade dos produtos, conseguimos divulgar suas peças.
+        </p>
+        <!--tag <a> faz referência e linka a uma página do mesmo site, especificando uma seção pela utilização do atributo global id-->
+        <p class="paragrafo">
+          <a href="contacts.html#parceiros-form"
+            >Clique aqui para saber mais!</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <!--tag <footer> indica o rodapé da página e contém informações de contato-->
+    <footer class="footer container">
+      <address>
+        <i>bichAninho LTDA</i>/CNPJ:00.123.456/0007-89/ Endereço: Rua dos bobos,
+        0 - Animais,SA - 88888-999 <br />
+        Encontrou algo errado?
+        <a href="mailto:webFullStack@domain.com">Contate-nos.</a>
+        <p>&copy; Todos os direitos reservados.</p>
+      </address>
+      <p class="paragrafo">Encontre nossos canais:</p>
+      <!-- icones -->
+      <a
+        href="https://www.instagram.com/bichAninho.petshop/"
+        target="blank"
+        id="instagram"
+      >
+        <div class="instagram"></div>
+      </a>
+      <a
+        href="https://www.facebook.com/people/BichAninho/100073094148303/"
+        target="blank"
+        id="facebook"
+      >
+        <div class="facebook"></div>
+      </a>
+    </footer>
+  </body>
+</html>

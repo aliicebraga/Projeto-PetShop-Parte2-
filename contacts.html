@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+  <!--Metadados da página, comum as outras páginas-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Alice Braga" />
+    <meta name="description" content="Loja de Roupinhas para Animais" />
+    <meta name="keywords" content="Roupas, Animais, Conforto" />
+    <title>Moda Animal</title>
+    <link rel="stylesheet" type="text/css" href="css/contacts.css" />
+  </head>
+  <body>
+    <!--tag <header> representa o cabeçalho da página-->
+    <!--tag <nav> indica ser a seção composta por um menu ou uma seção que leva a outras páginas-->
+    <header class="header">
+      <nav class="nav container" id="menu">
+        <a href="index.html" class="nav-item">
+          <img
+            src="logo/logo500x320.png"
+            alt="logo da marca bichAninho com o subtítulo aconchego para seu bichinho"
+            title="bichAninho é bicho mais aconchego"
+            id="logotipo"
+          />
+        </a>
+        <a href="index.html" class="nav-item menu">Página Inicial</a>
+        <a href="products.html" class="nav-item menu"
+          >Conheça Nossos Produtos</a
+        >
+        <a href="contacts.html" class="nav-item menu">Fale Conosco</a>
+        <a href="#" class="nav-item menu">"Minha conta"</a>
+      </nav>
+    </header>
+    <!--tag <main> consiste em uelemento semântico que representa conteúdo principal da página, 
+        ele é exclusivo e não se repete em outras páginas-->
+    <main class="main grid-container">
+      <!--tag <h1> indica o título principal da página e recomenda-que se tenha apenas um por página-->
+      <h1 class="titulo">Fale Conosco</h1>
+      <!--a tag <section> define uma seção genérica, foram utilizadas duas. uma section para o preenchimento de form dos clientes e uma para o preenchimento de form dos parceiros -->
+      <section name="clientes-form" class="section-clientes" id="clientes-form">
+        <h2>
+          Ei, pais de <i>bichAninhos</i>: deixem aqui seu recado, sugestão ou
+          reclamação.
+        </h2>
+        <p class="paragrafo">
+          Precisaremos de dados pessoais para identificação e alguns dados de
+          seu bichinho para melhorarmos nossos produtos!
+        </p>
+
+        <!--uso da tag <form> para captação da entrada de dados, o atributo action será preenchido com o valor do local para onde as informações seram processadas. nesse momento nenhum banco de dados será usado-->
+        <!--dentro da tag form foram utilizados vários inputs com atributos types diferentes para tipos de entradas diferentes, com o name e id definidos é possível entender a finalidade de cada um-->
+        <form action="">
+          <!--a tag <fieldset> tem como função agrupar um conjunto de elementos-->
+          <legend>Dados pessoais</legend>
+          <p>
+            <label for="nome"
+              >Nome:
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Como quer ser chamado?"
+            /></label>
+          </p>
+          <p>
+            <label for="telefone"
+              >Telefone:
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(__) _____-____"
+            /></label>
+          </p>
+          <p>
+            <label for="email"
+              >E-mail:
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Qual seu melhor e-mail?"
+            /></label>
+          </p>
+          <p>
+            <label for="compra-radio"
+              >Já realizou alguma compra em nosso site?</label
+            ><br />
+            <input type="radio" name="compra-radio" id="compra-sim" />
+            <label for="compra-sim"
+              >Sim. (Caso sim, indique qual foi seu pedido mais recente)</label
+            >
+            <input type="radio" name="compra-radio" id="compra-nao" />
+            <label for="compra-nao">Não.</label>
+          </p>
+          <p>
+            <label for="pedido"
+              >Pedido:
+              <input
+                type="number"
+                id="pedido"
+                name="pedido"
+                placeholder="XXXX-XX"
+            /></label>
+          </p>
+          <p>
+            <label for="data-pedido"
+              >Data da compra: <br /><input
+                type="date"
+                name="data-pedido"
+                id="data-pedido"
+            /></label>
+          </p>
+          <p>
+            <label for="assunto"
+              >Escolha o assunto da mensagem:
+              <select name="assunto" id="assunto">
+                <option>Assunto</option>
+                <option value="sugestao">Sugestão</option>
+                <option value="reclamacao">Reclamação</option>
+                <option value="elogio">Elogio</option>
+                <option value="outros">Outros</option>
+              </select></label
+            >
+          </p>
+          <p>
+            <label for="mensagem"
+              >Deixe aqui sua mensagem:
+              <textarea name="mensagem" id="mensagem"></textarea>
+            </label>
+          </p>
+          <p>Sobre seu pet:</p>
+          <p>
+            <label for="especie"
+              >Espécie(s) do(s) seu(s) <i>bichAninho:</i></label
+            >
+            <input type="checkbox" name="especie" id="especie-dog" />
+            <label for="especie-dog">Cachorro</label>
+            <input type="checkbox" name="especie" id="especie-coelho" />
+            <label for="especie-coelho">Coelho</label>
+            <input type="checkbox" name="especie" id="especie-cat" />
+            <label for="especie-cat">Gato</label>
+            <input type="checkbox" name="especie" id="especie-rato" />
+            <label for="especie-rato">Roedor</label>
+            <input type="checkbox" name="especie" id="especie-outro" />
+            <label for="especie-outro">Outros</label>
+          </p>
+          <p>
+            <label for="quantidade">Quantidade de <i>bichAninho:</i></label>
+            <select name="quantidade" id="quantidade">
+              <option>Quantidade</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+            </select>
+          </p>
+          <p>
+            <button type="reset" id="limpar" name="limpar">Limpar</button>
+            <button type="submit" id="enviar" name="enviar">Enviar</button>
+          </p>
+        </form>
+      </section>
+      <section
+        name="parceiros-form"
+        class="section-parceiros"
+        id="section-parceiros-form"
+      >
+        <h2>Quer se tornar um parceiro?</h2>
+        <p class="paragrafo">
+          Faça aqui seu cadastro. Faremos uma análise junto ao nosso time de
+          suporte e qualidade para sempre garantirmos o melhor aos nossos
+          clientes. Assim que tivermos um retorno, entraremos em contato!
+        </p>
+        <form action="" id="parceiros-form">
+          <legend>Cadastro pequenas empresas:</legend>
+          <p>
+            <label for="nome"
+              >Nome:
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Nome para contato"
+            /></label>
+          </p>
+          <p>
+            <label for="telefone"
+              >Telefone:
+              <input
+                type="number"
+                id="telefone"
+                name="telefone"
+                placeholder="(__) _____-____"
+            /></label>
+          </p>
+          <p>
+            <label for="email"
+              >E-mail:
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Qual seu melhor e-mail?"
+            /></label>
+          </p>
+          <p>
+            <label for="idade">Qual sua idade?</i></label><br>
+            <select name="idade" id="idade">
+              <option>Selecione sua idade</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45">45</option>
+              <option value="46">46</option>
+              <option value="47">47</option>
+              <option value="48">48</option>
+              <option value="49">49</option>
+              <option value="50">50</option>
+              <option value="51">51</option>
+              <option value="52">52</option>
+              <option value="53">53</option>
+              <option value="54">54</option>
+              <option value="55">55</option>
+              <option value="56">56</option>
+              <option value="57">57</option>
+              <option value="58">58</option>
+              <option value="59">59</option>
+              <option value="60">60</option>
+              <option value="61">61</option>
+              <option value="62">62</option>
+              <option value="63">63</option>
+              <option value="64">64</option>
+              <option value="65">65</option>
+              <option value="66">66</option>
+              <option value="67">67</option>
+              <option value="68">68</option>
+              <option value="69">69</option>
+              <option value="70">70</option>
+              <option value="71">71</option>
+              <option value="72">72</option>
+              <option value="73">73</option>
+              <option value="74">74</option>
+              <option value="75">75</option>
+              <option value="76">76</option>
+              <option value="77">77</option>
+              <option value="78">78</option>
+              <option value="79">79</option>
+              <option value="80">80</option>
+              <option value="81">81</option>
+              <option value="82">82</option>
+              <option value="83">83</option>
+              <option value="84">84</option>
+              <option value="85">85</option>
+              <option value="86">86</option>
+              <option value="87">87</option>
+              <option value="88">88</option>
+              <option value="89">89</option>
+              <option value="90">90</option>
+              <option value="91">91</option>
+              <option value="92">92</option>
+              <option value="93">93</option>
+              <option value="94">94</option>
+              <option value="95">95</option>
+              <option value="96">96</option>
+              <option value="97">97</option>
+              <option value="98">98</option>
+              <option value="99">99</option>
+              <option value="100+">+ de 100</option>
+            </select>
+          </p>
+          <p>
+            <label for="cidade"
+              >Qual cidade reside: <br>
+              <input
+                type=""
+                id="cidade"
+                name="cidade"
+                placeholder="Digite sua cidade"
+            /></label>
+          </p>
+          <p>
+            <label for="estado"
+              >Qual estado reside: <br>
+              <input type="text" id="estado" name="estado" placeholder="UF"
+            /></label>
+          </p>
+          <p>
+            <label for="especie"
+              >Para qual <i>bichAninho</i> teria mais interesse de produzir
+              peças?</label
+            ><br />
+            <select name="especie" id="especie">
+              <option>Selecione</option>
+              <option value="dog">Cachorro</option>
+              <option value="coelho">Coelho</option>
+              <option value="cat">Gato</option>
+              <option value="rato">Roedor</option>
+              <option value="outro">Outros</option>
+            </select>
+          </p>
+          <p>
+            <label for="cadastro-mei-radio">Já possui cadastro MEI?</label><br>
+            <input type="radio" name="cadastro-mei-radio" id="mei-sim" />
+            <label for="mei-sim">Sim.</label><br>
+            <input type="radio" name="cadastro-mei-radio" id="mei-nao" />
+            <label for="mei-nao">Não.</label>
+          </p>
+          <p>
+            <button type="reset" id="limpar" name="limpar">Limpar</button>
+            <button type="submit" id="enviar" name="enviar">Enviar</button>
+          </p>
+        </form>
+      </section>
+    </main>
+    <!--tag <footer> indica o rodapé da página e contém informações de contato-->
+    <footer class="footer container">
+      <address>
+        <i>bichAninho LTDA</i>/CNPJ:00.123.456/0007-89/ Endereço: Rua dos bobos,
+        0 - Animais,SA - 88888-999 <br />
+        Encontrou algo errado?
+        <a href="mailto:webFullStack@domain.com">Contate-nos.</a>
+        <p>&copy; Todos os direitos reservados.</p>
+      </address>
+      <p>Encontre nossos canais:</p>
+      <!-- icones -->
+      <a
+        href="https://www.instagram.com/bichAninho.petshop/"
+        target="blank"
+        id="instagram"
+      >
+        <div class="instagram"></div>
+      </a>
+      <a
+        href="https://www.facebook.com/people/BichAninho/100073094148303/"
+        target="blank"
+        id="facebook"
+      >
+        <div class="facebook"></div>
+      </a>
+    </footer>
+  </body>
+</html>

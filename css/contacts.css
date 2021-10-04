@@ -1,0 +1,217 @@
+/* RESET DA PÁGINA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  flex-wrap: wrap;
+  font-size: 100%;
+  /* word-wrap: break-word; */
+}
+
+/* DECLARAÇÃO DE VARIÁVEIS - FACILITA NA HORA DE CHAMAR AS CORES */
+:root {
+  /* paleta de cores complementar*/
+  --color01: #308eb0;
+  --color02: #78dbff;
+  --color03: #5dd2fc;
+  --color04: #b38d63;
+  --color05: #fd8300;
+  --back-color: aliceblue;
+}
+
+/* DEFININDO O BODY COMO DISPLAY GRID, NA PÁGINA INDEX TEM TRÊS LINHAS E UMA COLUNA */
+body {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 100vw;
+  grid-template-rows: 15vh auto auto;
+}
+
+/* CADA CLASSE COM SUA RESPECTATIVA GRID-AREA, DEFININDO TAMBÉM COR DE FUNDO E BORDA */
+.header {
+  grid-area: header;
+  background-color: var(--color03);
+  border-bottom: 1px solid var(--color05);
+}
+
+.main {
+  grid-area: main;
+  /* background-color: var(--back-color); */
+}
+
+/* PROPRIEDADE COLOR DEFINE A COR DO TEXTO */
+.footer {
+  grid-area: footer;
+  background-color: var(--color03);
+  color: var(--color04);
+  border-bottom: 1px solid var(--color05);
+  padding: 1rem;
+}
+
+/* TAG NAV CLASSIFICADA COMO CONTAINER PARA POSSIBILITAR A CHAMADA DO DISPLAY FLEX NO MENU*/
+.nav.container {
+  display: flex;
+  width: 100vw;
+  height: 15vh;
+  justify-content: center;
+}
+
+/* ESTILIZAÇÕES DOS ITENS DO MENU QUE TEM ESCRITA */
+.nav-item.menu {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--color05);
+  background-color: var(--back-color);
+  margin: auto;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+/* SELETOR PARA MUDAR A ESTILIZAÇÃO QUANDO O MOUSE PASSA POR CIMA */
+.nav-item.menu:hover {
+  text-decoration: underline;
+  /* font-size: 1.3rem; */
+  padding: 1.5rem;
+  color: var(--back-color);
+  background-color: var(--color05);
+}
+
+/* ESTILIZAÇÃO DO ITEM DO MENU QUE TEM LOGO */
+.nav-item #logotipo {
+  height: 14vh;
+  padding-top: 1vh;
+}
+
+/* DEFININDO SEÇÃO COM DISPLAY GRID PARA SEPARAR AS DUAS FORMS EM DUAS COLUNAS */
+.grid-container {
+  display: grid;
+  padding: 10px;
+  grid-template-areas:
+    'titulo titulo'
+    'section-clientes section-parceiros';
+  grid-template-columns: 50vw 50vw;
+  grid-template-rows: auto auto;
+  margin-bottom: 3rem;
+}
+
+/* ALINHAMENTO DA TAG H1 NO CENTRO DA PÁGINA E DEFINIÇÃO DA FONTE NO TAMANHO DEFAULT */
+.titulo {
+  grid-area: titulo;
+  text-align: center;
+  padding: 2%;
+  font-size: 2em;
+}
+
+/* DEFINIÇÃO DAS SECTIONS COMO GRID-AREA */
+.section-clientes {
+  grid-area: section-clientes;
+  box-sizing: content-box;
+  border: 2px solid var(--color05);
+  margin: 1rem;
+}
+
+.section-parceiros {
+  grid-area: section-parceiros;
+  box-sizing: border-box;
+  background-color: var(--color01);
+  margin: 1rem;
+}
+
+/* ESTILIZAÇÃO DA TAG H2 PARA FICAR CENTRALIZADO */
+h2 {
+  text-align: center;
+  padding: 2%;
+  font-size: 1.5em;
+}
+
+#section-parceiros-form .paragrafo {
+  margin-top: 2rem;
+}
+
+/* ESTILIZAÇÃO PARA TER O ESPAÇAMENTO DO PARÁGRAFO E NÃO FICAR COLADO COM A BORDA*/
+.paragrafo {
+  padding: 0 1.5rem 1rem 1rem;
+  /* text-align: center; */
+  font-size: 1.2rem;
+  text-indent: 2rem;
+  text-align: justify;
+}
+
+#parceiros-form {
+  text-align: left;
+  padding: 0 1.5rem 1rem 1rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+#parceiros-form legend {
+  font-weight: bold;
+}
+
+#clientes-form {
+  text-align: left;
+  padding: 0 1.5rem 1rem 1rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+#clientes-form legend {
+  font-weight: bold;
+}
+
+/* ESTILIZAÇÃO DOS BOTÕES */
+.main button {
+  padding: 0.5rem;
+  border-radius: 2rem;
+  border-color: var(--color05);
+  font-variant: small-caps;
+}
+
+/* ESTILIZAÇÃO DO BOTÃO COM O SELETOR HOVER */
+button:hover {
+  text-decoration: underline;
+
+  color: var(--back-color);
+  background-color: var(--color05);
+}
+
+/* ESTILIZAÇÃO DO RODAPÉ COMO DISPLAY FLEX, O QUE POSSIBILITA A DIVISÃO DO CONTEÚDO EM TRES COLUNAS DIFERENTES. CADA UMA COM SEU TAMANHO DEFINIDO PELO CONTEÚDO */
+.footer.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+/* DFINIÇÃO DO TAMANHO DA TAG ADDRESS E ESPAÇAMENTO ENTRE LINHAS */
+.footer address {
+  width: 60vw;
+  line-height: 2rem;
+}
+
+/* DEFINIÇÃO DE LINHA SUBLINHADA PARA TODA TAG P NO FOOTER */
+.footer .paragrafo {
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+/* CHAMADA DA IMAGEM QUE SIMBOLIZA O ÍCONE E LINK PARA O INSTAGRAM */
+.footer #instagram {
+  align-items: center;
+  width: 4vw;
+  background-image: url('../img/instagram.png');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* CHAMADA DA IMAGEM QUE SIMBOLIZA O ÍCONE E LINK PARA O FACEBOOK */
+.footer #facebook {
+  align-items: center;
+  width: 4vw;
+  background-image: url('../img/facebook.png');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
