@@ -150,6 +150,7 @@ li:nth-of-type(5) {
   margin: auto;
   box-sizing: border-box;
   border-radius: 5%;
+  line-height: 1.5rem;
 }
 
 /* ESTILIZAÇÃO DO BACKGROUND USANDO O SELETOR */
