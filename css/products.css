@@ -76,7 +76,7 @@ body {
 .nav-item.menu:hover {
   text-decoration: underline;
   /* font-size: 1.3rem; */
-  padding: 1.5rem;
+  padding: 1.2rem;
   color: var(--back-color);
   background-color: var(--color05);
 }
@@ -102,27 +102,30 @@ h2 {
 
 h3 {
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 1.17rem;
 }
 
 /* ESTILIZAÇÃO DO CONTEÚDO DA TAG ASIDE */
+.aside.container {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  flex-direction: column;
+}
+
 #conteudo-aside p {
-  padding: 2%;
+  padding: 0 1rem 1rem 1rem;
   text-indent: 2rem;
-  text-align: left;
-  font-size: 1rem;
+  text-align: justify;
+  font-size: 0.9rem;
 }
 
 #conteudo-aside ol {
-  /* padding-left: 1rem; */
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  padding: 0 1rem 1rem 0;
   margin-left: 2rem;
-}
-
-#video-aside {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 
 /* SELETOR DEFININDO O QUINTO ELEMENTO DA TAG LI COM PESO BOLD */
@@ -163,6 +166,7 @@ li:nth-of-type(5) {
   padding: 0.4rem;
   border-radius: 2rem;
   border-color: var(--color05);
+  font-size: 1rem;
   font-variant: small-caps;
 }
 
@@ -202,13 +206,13 @@ button:hover {
 
 .tr-item {
   border: 1px solid var(--color05);
-  font-size: 1.2em;
+  font-size: 1.2rem;
   text-align: center;
 }
 
 .tr-left {
   text-align: left;
-  font-size: 1em;
+  font-size: 1rem;
   padding-top: 2rem;
 }
 
@@ -227,7 +231,7 @@ button:hover {
 
 /* DEFINIÇÃO DE LINHA SUBLINHADA PARA TODA TAG P NO FOOTER */
 .footer .paragrafo {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: underline;
 }
 

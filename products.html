@@ -32,7 +32,7 @@
         <a href="#" class="nav-item menu">"Minha conta"</a>
       </nav>
     </header>
-    <aside class="aside">
+    <aside class="aside container">
       <h2>Conheça mais sobre o processo de vendas</h2>
       <!--Conjunto de parágrafos para introduzir o conteúdo princial, no caso as compras-->
       <section id="conteudo-aside">
@@ -46,12 +46,13 @@
         </ol>
         <p>Em caso de dúvidas ou divergências no pedido, <a href="contacts.html#clientes-form">entre em contato conosco.</a></p>
       </section>
-      <section id="video-aside">
-        <h3>Ainda em dúvida? Assista essas fofuras</h3>
-        <iframe width="320" height="240"
-        src="https://www.youtube.com/watch?v=jb_vt6vgpP4">
-        </iframe> 
-      </section>
+
+      <h3>Ainda em dúvida? Assista essas fofuras</h3>
+      <iframe id="video-aside" width="280" height="200"
+      src="https://www.youtube.com/watch?v=jb_vt6vgpP4">
+      Desculpe, o navegador não suporta o vídeo.
+      </iframe> 
+
     </aside>
         <!--tag <main> consiste em um elemento semântico que representa o conteúdo principal da página, 
         ele é exclusivo e não se repete em outras páginas-->
@@ -59,6 +60,13 @@
       <!--tag <h1> indica o título principal da página e recomenda-que se tenha apenas um por página-->
       <h1>Temos aqui aconchego para o seu bichinho!</h1>
       <!--uso da tag <form> para captação da entrada de dados, nesse caso seria a "venda" das roupinhas. o atributo action será preenchido com o valor do local para onde as informações seram processadas. nesse momento nenhum banco de dados será usado-->
+
+
+
+      <!-- ATUALIZAR ESSA PARTE COM DIVS PARA SEPARAÇÃO DO CONTEÚDO DO TIPO DISPLAY FLEXBOX (PENSANDO NA RESPONSIVIDADE) E NÃO TABELA -->
+
+
+
       <div class="product-container">
         <section class="product-item" id="dog-table">
           <form action="" id="dog-form">

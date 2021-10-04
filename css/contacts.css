@@ -75,7 +75,7 @@ body {
 .nav-item.menu:hover {
   text-decoration: underline;
   /* font-size: 1.3rem; */
-  padding: 1.5rem;
+  padding: 1.2rem;
   color: var(--back-color);
   background-color: var(--color05);
 }
@@ -103,7 +103,7 @@ body {
   grid-area: titulo;
   text-align: center;
   padding: 2%;
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 /* DEFINIÇÃO DAS SECTIONS COMO GRID-AREA */
@@ -125,7 +125,7 @@ body {
 h2 {
   text-align: center;
   padding: 2%;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 #section-parceiros-form .paragrafo {
@@ -136,7 +136,7 @@ h2 {
 .paragrafo {
   padding: 0 1.5rem 1rem 1rem;
   /* text-align: center; */
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-indent: 2rem;
   text-align: justify;
 }
@@ -144,7 +144,7 @@ h2 {
 #parceiros-form {
   text-align: left;
   padding: 0 1.5rem 1rem 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 2rem;
 }
 #parceiros-form legend {
@@ -154,7 +154,7 @@ h2 {
 #clientes-form {
   text-align: left;
   padding: 0 1.5rem 1rem 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 2rem;
 }
 #clientes-form legend {
@@ -192,7 +192,7 @@ button:hover {
 
 /* DEFINIÇÃO DE LINHA SUBLINHADA PARA TODA TAG P NO FOOTER */
 .footer .paragrafo {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-decoration: underline;
 }
 
